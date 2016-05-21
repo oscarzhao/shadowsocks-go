@@ -1,8 +1,9 @@
-FROM scratch
-MAINTAINER Zhao Shuai-long <oscarzhaosl@gmail.com>
+FROM busybox
+MAINTAINER Oscar <oscarzhaosl@gmail.com>
 
-COPY shadowsocks-server /shadowsocks-server
+COPY server /sserver
+COPY run.sh /run.sh
 
-ENTRYPOINT ["/shadowsocks-server"]
-
-CMD ["--help"]
+ENV PASSWORD TenxCloud
+EXPOSE 2016
+ENTRYPOINT ["/run.sh"]
