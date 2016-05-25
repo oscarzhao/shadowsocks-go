@@ -6,4 +6,4 @@ COPY run.sh /run.sh
 
 ENV PASSWORD TenxCloud
 EXPOSE 2016
-ENTRYPOINT ["/run.sh"]
+CMD ["/run.sh"]
